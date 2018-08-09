@@ -26,13 +26,13 @@ with open(filepath, newline = '') as csvfile:
 
 difference = [revenue[i+1]-revenue[i] for i in range(len(revenue)-1)]
 
-#avg_difference = round(statistics.mean(difference),2)
-
 for items in difference:
     sum_difference += items
     num_items_difference +=1
 
 avg_difference = round(sum_difference/num_items_difference,2)
+
+#avg_difference = round(statistics.mean(difference),2) <----------------This was using the stats module, which is not allowed
 
 del dates[0]
 
