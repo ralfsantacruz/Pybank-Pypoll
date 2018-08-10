@@ -46,14 +46,22 @@ for i, j in zip(dates, difference):
         min_date = i
 
 
-print("Financial Analysis")
-print("------------------------------------")
-print(f"Total Months: {row_count}")
-print(f"Total: ${net_revenue}")
-print(f"Average Change: ${avg_difference}")
-print(f"Greatest Increase in Profits: ${max_difference} on {max_date}")
-print(f"Greatest Decrease in Profits: ${min_difference} on {min_date}")
+print('Financial Analysis')
+print('------------------------------------')
+print(f'Total Months: {row_count}')
+print(f'Total: ${net_revenue}')
+print(f'Average Change: ${avg_difference}')
+print(f'Greatest Increase in Profits: ${max_difference} on {max_date}')
+print(f'Greatest Decrease in Profits: ${min_difference} on {min_date}')
 
 
+with open('output.txt', 'w', newline='') as textfile:
+    textfile.write('Financial Analysis\n')
+    textfile.write('------------------------------------\n')
+    textfile.write(f'Total Months: {row_count}\n')
+    textfile.write(f'Total: ${net_revenue}\n')
+    textfile.write(f'Average Change: ${avg_difference}\n')
+    textfile.write(f'Greatest Increase in Profits: ${max_difference} on {max_date}\n')
+    textfile.write(f'Greatest Decrease in Profits: ${min_difference} on {min_date}\n')
 
 

@@ -60,6 +60,16 @@ print('-------------------------')
 print(f'Winner: {winner}')
 print('-------------------------')
 
+with open('output.txt', 'w', newline='') as textfile:
+    textfile.write('Election Results\n')
+    textfile.write('-------------------------\n')
+    textfile.write(f'Total Votes: {total_votes}\n')
+    for a, b, c in results:
+        textfile.write(f'{a}: {c}%, ({b})\n')
+    textfile.write('-------------------------\n')
+    textfile.write(f'Winner: {winner}\n')
+    textfile.write('-------------------------\n')
+
 
 
 
