@@ -60,6 +60,8 @@ print('-------------------------')
 print(f'Winner: {winner}')
 print('-------------------------')
 
+
+
 with open('output.txt', 'w', newline='') as textfile:
     textfile.write('Election Results\n')
     textfile.write('-------------------------\n')
